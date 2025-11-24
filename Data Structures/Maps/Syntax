@@ -1,0 +1,54 @@
+This file contians Syntax in java map to begin with.
+
+
+1.Creating a Map
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapExample {
+    public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+
+        map.put(1, "One");
+        map.put(2, "Two");
+        map.put(3, "Three");
+
+        System.out.println(map);  
+    }
+}
+
+
+put(key, value) → adds or updates a key-value pair.
+
+
+2.Accessing Values
+System.out.println(map.get(2)); // Output: "Two"
+System.out.println(map.get(4)); // Output: null (key doesn't exist)
+
+get(key) → returns the value for that key.
+If the key isn’t in the map, it returns null.
+
+
+4️.Checking if a Key Exists
+if (map.containsKey(1)) {
+    System.out.println("Key 1 exists!");
+}
+containsKey(key) → returns true if the key is in the map.
+
+5️.Iterating Over a Map
+Option 1: Using entrySet()
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println(entry.getKey() + " -> " + entry.getValue());
+}
+entrySet() gives a set of key-value pairs.
+entry.getKey() → key, entry.getValue() → value
+
+Option 2: Using keySet()
+for (Integer key : map.keySet()) {
+    System.out.println(key + " -> " + map.get(key));
+}
+keySet() gives all keys, then you can get(key) to access the value.
+
+5. Removing a Key
+map.remove(2);  // Removes key 2 and its value
