@@ -3,6 +3,8 @@ This file contians Syntax in java map to begin with.
 
 1.Creating a Map
 
+//explains the syntax of the map
+
 import java.util.HashMap;
 import java.util.Map;
 
